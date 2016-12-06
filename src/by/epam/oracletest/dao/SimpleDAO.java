@@ -1,5 +1,6 @@
 package by.epam.oracletest.dao;
 
+import by.epam.oracletest.domain.Request;
 import by.epam.oracletest.domain.User;
 
 import java.util.List;
@@ -9,4 +10,5 @@ import java.util.List;
  */
 public interface SimpleDAO {
     List<User> getAllUsers();
+    List<Request> getRequestsByUser(int userId);
 }

@@ -1,5 +1,6 @@
 package by.epam.oracletest.dao;
 
+import by.epam.oracletest.domain.Request;
 import by.epam.oracletest.domain.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -24,6 +25,11 @@ public class OracleSimpleDAO implements SimpleDAO {
     @Override
     public List<User> getAllUsers() {
         return jdbcTemplate.query("select * from railway_user", new UserMapper());
+    }
+
+    @Override
+    public List<Request> getRequestsByUser(int userId) {
+        return null;
     }
 
     private static class UserMapper implements RowMapper<User> {

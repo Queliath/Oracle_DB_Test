@@ -6,10 +6,10 @@ import java.util.List;
 /**
  * Created by Uladzislau_Kastsevic on 12/6/2016.
  */
-public class User implements Serializable{
+public class Group implements Serializable {
     private int id;
     private String name;
-    private List<Group> groupList;
+    private List<User> members;
 
     public int getId() {
         return id;
@@ -27,17 +27,17 @@ public class User implements Serializable{
         this.name = name;
     }
 
-    public List<Group> getGroupList() {
-        return groupList;
+    public List<User> getMembers() {
+        return members;
     }
 
-    public void setGroupList(List<Group> groupList) {
-        this.groupList = groupList;
+    public void setMembers(List<User> members) {
+        this.members = members;
     }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Group{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
